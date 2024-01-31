@@ -21,9 +21,9 @@ app.use(express.json());
 
 
 app.use(cors({
-  // origin: 'http://localhost:3100',
-  // methods: ["GET","POST"],
-  // credentials: true,
+  origin: 'https://forgetpasword-fashion-s.netlify.app',
+  methods: ["GET","POST"],
+  credentials: true,
 
 }));
 
