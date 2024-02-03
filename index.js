@@ -157,7 +157,7 @@ app.post('/forgot-password', (req, res) => {
             from: process.env.EMAIL_USERNAME,
             to: email,
             subject: 'Reset Password Link',
-            link: `https://forgetpaswords-fashion-s.netlify.app/reset-passwod/${user._id}/${token}`
+            text: `https://forgetpaswords-fashion-s.netlify.app/reset-passwod/${user._id}/${token}`
           };
           
           transporter.sendMail(mailOptions, function(error, info){
