@@ -164,7 +164,7 @@ app.post('/forgot-password', (req, res) => {
             if (error) {
               console.log(error);
             } else {
-              return res.send({Status: "Success"})
+              return res.send({Status: "password reset Success"})
             }
           });
     })
