@@ -21,7 +21,7 @@ app.use(express.json());
 
 
 app.use(cors({
-  origin: 'https://forgetpaswords-fashions.netlify.app',
+  origin: 'https://forgetpaswords-fashion-s.netlify.app',
   methods: ["GET","POST"],
   credentials: true,
 
@@ -157,14 +157,14 @@ app.post('/forgot-password', (req, res) => {
             from: process.env.EMAIL_USERNAME,
             to: email,
             subject: 'Reset Password Link',
-            text: `https://forgetpaswords-fashions.netlify.app/reset-passwod?id=${user._id}&token=${token}`
+            text: `https://forgetpaswords-fashion-s.netlify.app/reset-passwod/${user._id}/${token}`
           };
           
           transporter.sendMail(mailOptions, function(error, info){
             if (error) {
               console.log(error);
             } else {
-              return res.send({Status: "password reset Success"})
+              return res.send({Status: "Success"})
             }
           });
     })
